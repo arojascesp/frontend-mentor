@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+
+:root { 
+  --pale_blue: hsl(225, 100%, 94%);
+  --bright_blue: hsl(245, 75%, 52%);
+  --very_pale_blue: hsl(225, 100%, 98%);
+  --desaturated_blue: hsl(224, 23%, 55%);
+  --dark_blue: hsl(223, 47%, 23%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  background-color: var(--very_pale_blue);
+  text-align: center;
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+p {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--desaturated_blue);
+}
+
+button {
+  font-family: inherit;
+}
+
+.bg__image {
+  background: url("./images/pattern-background-mobile.svg") no-repeat center/cover;
+  height: 400px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.btn {
+  border: none;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-change {
+  background-color: transparent;
+  color: var(--bright_blue);
+  text-decoration: underline;
+}
+
+.btn-primary {
+  background-color: var(--bright_blue);
+  color: #fff;
+  padding: 10px;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--desaturated_blue);
+  margin: 20px;
+}
+
+.btn-primary:hover , .btn-change:hover{
+  opacity: 0.8;
+}
+
+.container {
+  max-width: 450px;
+  background-color: #fff;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px hsl(228, 45%, 44%, 0.15);
+}
+
+.container img.hero {
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+}
+
+h1 {
+  margin-top: 2rem;
+  color: hsl(223, 47%, 23%);
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 768px) {
+  .bg_image {
+    background: url("./images/pattern-background-desktop.svg") no-repeat center/cover;
+    height: 50vh;
+  }
+  .container {
+    max-width: 450px;
+  }
+  
+  body {
+    text-align: center;
+  }
+}
+
+.container .deal {
+  margin: 20px auto;
+  padding: 10px;
+  background-color: var(--pale_blue);
+  width: 90%;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.container .deal article {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .deal article img {
+  margin-right: 10px;
+}
+
+.container .buttons {
+  margin: 30px auto;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}

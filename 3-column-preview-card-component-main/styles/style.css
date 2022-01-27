@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --paragraphs: hsla(0, 0%, 100%, 0.75);
+  --bg-headings-buttons: hsl(0, 0%, 95%);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 15px;
+}
+
+.container {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: scroll;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 60%;
+  margin: 30px 5em;
+  border-radius: .33em;
+  height: 100%;
+}
+
+.card {
+  height: 100%;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: space-around;
+  margin: 1.5em 2em;
+  min-height: 20rem;
+  max-width: 250px;
+}
+
+.card-title {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-size: 3em;
+  color: var(--bg-headings-buttons);
+}
+
+.card-text {
+  font-family: 'Lexend Deca', sans-serif;
+  color: var(--paragraphs);
+  line-height: 1.6em;
+  letter-spacing: .1em;
+}
+
+.card-button {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 400;
+  border-style: none;
+  border-radius: 2em;
+  background-color: var(--bg-headings-buttons);
+  padding: 1.3em 3em;
+}
+
+.card-button:hover {
+  color: var(--bg-headings-buttons);
+  cursor: pointer;
+  background-color: transparent;
+  border: solid 2px var(--bg-headings-buttons);
+} 
+
+.bright-orange {
+  color: var(--bright-orange);
+}
+
+.dark-cyan {
+  color: var(--dark-cyan);
+}
+
+.very-dark-cyan {
+  color: var(--very-dark-cyan);
+}
+
+.sedan {
+  background-color: var(--bright-orange);
+  border-radius: .33em .33em 0 0;
+}
+
+.suv {
+  background-color: var(--dark-cyan);
+}
+
+.luxury {
+  background-color: var(--very-dark-cyan);
+  border-radius: 0 0 .33em .33em;
+}
+
+@media (min-width: 900px) {
+  .cards {
+    display: flex;
+    flex-direction: row;
+    max-width:1440px;
+    width: 60%;
+    height: 60%;
+    max-height: 800px;
+  }
+
+  .card-container {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 2em;
+  }
+
+  .sedan {
+  border-radius: .33em 0 0 .33em;
+}
+
+.luxury {
+  background-color: var(--very-dark-cyan);
+  border-radius: 0 .33em .33em 0;
+}
+}
